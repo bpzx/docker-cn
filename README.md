@@ -1,5 +1,5 @@
 # docker-cn
-国内 Debain 系统一键安装 Docker
+国内 Debain 系统一键安装/卸载 Docker
 
 # 使用说明
 安装：
