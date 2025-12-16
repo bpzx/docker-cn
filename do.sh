@@ -33,13 +33,12 @@ install_docker() {
     apt update
     apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
-    # 配置Docker镜像加速器
+    # 配置Docker镜像加速器，建议自建
     echo "配置Docker镜像加速器..."
     mkdir -p /etc/docker
     tee /etc/docker/daemon.json <<-'EOF'
 {
   "registry-mirrors": [
-    "https://docker.nju.edu.cn",
     "https://docker.m.daocloud.io",
     "https://docker.mirrors.ustc.edu.cn"
   ]
