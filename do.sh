@@ -21,7 +21,8 @@ install_docker() {
     mkdir -p /etc/apt/keyrings
 
     # 下载并安装Docker GPG密钥
-    curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
     # 添加Docker软件源（使用阿里云镜像）
     echo "配置Docker软件源..."
