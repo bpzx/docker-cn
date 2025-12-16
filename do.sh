@@ -39,7 +39,9 @@ install_docker() {
     tee /etc/docker/daemon.json <<-'EOF'
 {
   "registry-mirrors": [
-    "https://docker.m.daocloud.io"
+    "https://docker.nju.edu.cn",
+    "https://docker.m.daocloud.io",
+    "https://docker.mirrors.ustc.edu.cn"
   ]
 }
 EOF
